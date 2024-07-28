@@ -1,0 +1,288 @@
+@import "default";
+
+@mixin buttonStyle($color) {
+  font-size: 0.875rem;
+  line-height: 1.429;
+  min-width: 79px;
+  padding: 9px 17px;
+  height: 38px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 1px solid $caribbeanGreen;
+  background-color: $white;
+  color: $color;
+  text-transform: none;
+
+  &:hover {
+    background-color: $lightGreen;
+  }
+}
+
+@mixin contentCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  color: $darkCyanBlue;
+  font-family: $defaultFont;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.signup-header {
+  position: fixed;
+  width: 50%;
+  left: auto;
+  right: 0;
+  padding: 0 24px;
+  padding-top: 24px;
+  background-color: $lightBlue;
+  box-shadow: none;
+  box-sizing: border-box;
+
+  .header-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .how-it-work-btn {
+      @include buttonStyle($black);
+      &:focus {
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05),
+          0px 0px 0px 3px rgba(79, 222, 203, 0.4);
+      }
+    }
+  }
+}
+
+.grid-wrapper {
+  background-color: $lightBlue;
+  height: 100vh;
+  overflow: hidden;
+
+  .banner-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+  }
+}
+
+.close-btn-stack {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+
+  .close-btn {
+    @include buttonStyle($caribbeanGreen);
+    border: none;
+  }
+}
+
+.step-label {
+  background-color: rgb(224, 247, 250);
+  color: $darkGreen;
+  width: fit-content;
+  font-family: "Helvetica Neue";
+  font-size: 0.875rem;
+  line-height: 1.3;
+  padding: 0px 12px;
+  font-weight: 500;
+
+  .MuiChip-icon {
+    color: $darkGreen;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.right-section {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .singup-title {
+    margin-top: 48px;
+    color: $darkGreen;
+    font-size: 3rem;
+    line-height: 1.19;
+    font-family: $fontTiempos;
+  }
+
+  .signup-paper-wrapper {
+    color: $darkCyanBlue;
+    border: 1px solid $lightGrey;
+    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 4px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+  }
+
+  .styled-textfield-icon {
+    display: flex;
+    margin: 0 10px auto;
+    width: 25px;
+    height: 25px;
+  }
+
+  .form-header {
+    height: 59px;
+    padding: 8px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .MuiFormLabel-root {
+    padding-left: 16px;
+    padding-right: 32px;
+    font-size: 0.875rem;
+    line-height: 1.429;
+
+    &.MuiInputLabel-shrink {
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+
+    &.Mui-focused {
+      color: $caribbeanGreen;
+    }
+  }
+
+  .MuiInput-root {
+    margin-top: 0;
+    padding-top: 16px;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    &::before {
+      border-bottom: 1px solid $lightGrey;
+    }
+    &.Mui-error {
+      &::before {
+        border-bottom: 2px solid $red;
+      }
+    }
+    &.Mui-focused {
+      &::after {
+        border-bottom: 2px solid $caribbeanGreen;
+      }
+    }
+
+    .MuiInput-input {
+      padding-bottom: 10px;
+      padding-left: 16px;
+      font-size: 0.875rem;
+      line-height: 1.429;
+      height: 1.68em;
+      padding-top: 7.5px;
+      padding-right: 14px;
+    }
+  }
+
+  .error-input {
+    background-color: #fef2f2;
+    .MuiFormLabel-root {
+      &.Mui-focused {
+        color: $red;
+      }
+    }
+
+    .Mui-focused {
+      &::after {
+        border-bottom: 2px solid $red;
+      }
+    }
+  }
+
+  .gender-select {
+    .MuiSelect-select {
+      &:focus {
+        background: none;
+      }
+    }
+  }
+
+  .email-input {
+    .MuiOutlinedInput-root {
+      height: 38px;
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $lightGrey;
+      }
+      &.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: $caribbeanGreen;
+          border-width: 2px;
+        }
+      }
+      &:hover {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: $darkCyanBlue;
+        }
+      }
+      &.Mui-error {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: $red;
+        }
+        background-color: #fef2f2;
+        color: $red;
+        -webkit-text-fill-color: $red;
+      }
+    }
+  }
+
+  .register-btn {
+    margin-top: 24px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #2b3649;
+    color: #ffff;
+    font-size: 1rem;
+    line-height: 1.313;
+    min-width: 101px;
+    padding: 13px 25px 13px 25px;
+    height: 47px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-transform: none;
+  }
+
+  .terms {
+    margin-top: 24px;
+    font-size: 0.875rem;
+    line-height: 1.429;
+    @include contentCenter();
+  }
+
+  .privacy-policy {
+    margin-top: 8px;
+    font-family: "Helvetica Neue";
+    font-size: 0.75rem;
+    line-height: 1.125;
+    font-weight: 500;
+  }
+
+  .icon {
+    transition: transform 0.1s ease-in-out;
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+
+  .terms,
+  .privacy-policy {
+    .MuiLink-root {
+      color: $caribbeanGreen;
+      text-decoration: none;
+    }
+  }
+}
