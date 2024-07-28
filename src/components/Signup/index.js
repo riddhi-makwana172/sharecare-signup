@@ -9,16 +9,25 @@ const SignupWrapper = () => {
     <>
       <Header />
       <Grid container className="grid-wrapper">
-        <Grid item xs={6} xl={6} sm={6} md={6} padding="20px">
+        <Grid
+          item
+          xs={12}
+          xl={6}
+          sm={12}
+          md={6}
+          padding="20px"
+          className="left-side-grid"
+        >
           <LeftSectionPreview />
         </Grid>
         <Grid
           item
-          xs={6}
+          xs={12}
           xl={6}
-          sm={6}
+          sm={12}
           md={6}
           sx={{ overflowY: "auto", height: "100vh" }}
+          className="right-side-grid"
         >
           <RightSectionPreview />
         </Grid>

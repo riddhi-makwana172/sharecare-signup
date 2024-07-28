@@ -1,17 +1,31 @@
 // colors
-$darkCyanBlue:#2B3649;
-$lightBlue:#f4f6f8;
+$darkCyanBlue: #2b3649;
+$lightBlue: #f4f6f8;
 $white: #fff;
-$caribbeanGreen: #00BFA5;
-$lightGreen: #ECFDF5;
+$caribbeanGreen: #00bfa5;
+$lightGreen: #ecfdf5;
 $darkGreen: #006658;
 $black: #000;
-$lightGrey: #D1D5DB;
-$red: #EF4444;
+$lightGrey: #d1d5db;
+$red: #ef4444;
 
+@font-face {
+  font-family: "TiemposHeadline-Regular";
+  src: url("https://db.onlinewebfonts.com/t/11cb6974aad7e20f9f6f7c2337e25d64.eot");
+  src: url("https://db.onlinewebfonts.com/t/11cb6974aad7e20f9f6f7c2337e25d64.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/11cb6974aad7e20f9f6f7c2337e25d64.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/11cb6974aad7e20f9f6f7c2337e25d64.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/11cb6974aad7e20f9f6f7c2337e25d64.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/11cb6974aad7e20f9f6f7c2337e25d64.svg#TiemposHeadline-Regular")
+      format("svg");
+}
 
 // font family
 $defaultFont: "Inter", "Helvetica", "Arial", "sans-serif";
-$fontTiempos: "Tiempos Headline Regular"
+$fontTiempos: "TiemposHeadline-Regular";
 
 // font size

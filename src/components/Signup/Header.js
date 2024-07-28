@@ -13,6 +13,7 @@ import {
   step3Title,
   step3,
   step2,
+  close,
 } from "../../utils/messages";
 import StepStack from "./StepStack";
 import CommonTextStack from "./CommonTextStack";
@@ -20,7 +21,7 @@ import CommonTextStack from "./CommonTextStack";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const helvFM = "Helvetica Neue",
-    timeposFM = "Tiempos Headline Regular";
+    timeposFM = "TiemposHeadline-Regular !important";
   const DrawerContent = (
     <Box
       sx={{ width: 403 }}
@@ -30,7 +31,7 @@ const Header = () => {
       onClick={() => setOpen(false)}
     >
       <Stack spacing={2} justifyContent="flex-end" className="close-btn-stack">
-        <Button className="close-btn">Close</Button>
+        <Button className="close-btn">{close}</Button>
       </Stack>
       <Stack marginTop="60px">
         <CommonTextStack
@@ -78,7 +79,7 @@ const Header = () => {
   return (
     <Paper component="header" className="signup-header">
       <Grid className="header-grid">
-        <Link href="https://try.sharecare.com/">
+        <Link href={process.env.REACT_APP_IMAGE_URL}>
           <img
             src={logoImgUrl}
             width="150"

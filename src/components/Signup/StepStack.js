@@ -6,7 +6,7 @@ const StepStack = ({ label, icon, stepLabel }) => {
   const textProps = {
     title: label,
     fontSize: "1.5rem",
-    fontFamily: "Tiempos Headline Regular",
+    fontFamily: "TiemposHeadline-Regular !important",
     color: "#006658",
     lineHeight: 1.125,
     marginTop: "24px",

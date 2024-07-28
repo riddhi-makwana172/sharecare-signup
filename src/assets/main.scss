@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import "default";
 
 @mixin buttonStyle($color) {
@@ -33,6 +34,10 @@ body {
   line-height: 1.5;
 }
 
+.MuiTypography-root {
+  font-family: $defaultFont;
+}
+
 .signup-header {
   position: fixed;
   width: 50%;
@@ -43,6 +48,8 @@ body {
   background-color: $lightBlue;
   box-shadow: none;
   box-sizing: border-box;
+  z-index: 1100;
+  top: 0;
 
   .header-grid {
     display: flex;
@@ -254,6 +261,10 @@ body {
     border-radius: 6px;
     font-weight: 500;
     text-transform: none;
+
+    &.MuiLoadingButton-loading {
+      background-color: rgba(43, 54, 73, 0.05);
+    }
   }
 
   .terms {
@@ -283,6 +294,37 @@ body {
     .MuiLink-root {
       color: $caribbeanGreen;
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .signup-header {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .singup-title {
+    display: none;
+  }
+  .welcome-box {
+    margin-top: 0;
+  }
+  .grid-wrapper {
+    overflow: unset;
+    min-height: 100vh;
+    height: 100%;
+
+    .left-side-grid {
+      height: 390px;
+      padding-top: 85px;
+      .banner-img {
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+    .right-side-grid {
+      overflow-y: unset;
+      height: 100%;
     }
   }
 }
